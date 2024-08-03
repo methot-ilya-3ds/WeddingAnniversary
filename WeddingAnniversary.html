@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 Boilerplate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="Header">Happy 30th Anniversary Vika and Moe!</h1>
+    <script src="scripts.js"></script>
+    <div class="video_holder">
+        <div class="vid_description">
+            Original Video ->
+        </div>
+        <div class="vid">
+            <video src="woodstock.mp4" type="video/mp4" id="Original_Video" loop autoplay muted>
+        </div>
+        </video>
+        <div class="vid_description">
+            AI Generated ->
+        </div>
+        <div class="vid">
+            <video src="Generation1.mp4" type="video/mp4" id="AI_Vid" loop autoplay muted>
+
+            </video>
+        </div>
+
+    </div>
+    <h1 class="Description">
+        Press the number on the keyboard to choose your alternate reality:
+    </h1>
+    <div class="vid_description">
+        <div class="SubDescription" style="font-size: 32px; justify-content: left">
+            1: Fantasy
+        </div>
+        <div class="SubDescription" style="font-size: 32px; justify-content: left">
+            2: High Resolution
+        </div>
+        <div class="SubDescription" style="font-size: 32px; justify-content: left;">
+            3: Vampires
+        </div>
+        <div class="SubDescription" style="font-size: 32px; justify-content: left;">
+            4: Glitchy!
+        </div>
+        <div class="SubDescription" style="font-size: 32px; justify-content: left;">
+            5: Horror?!
+        </div>
+    </div>
+</body>
+
+<script>
+    // Function to handle keypress event
+    function handleKeyPress(event) {
+        const message = document.getElementById('message');
+        const AI_Vid = document.getElementById('AI_Vid');
+        const Original_Vid = document.getElementById('Original_Video');
+        const currTime = Original_Vid.currentTime;
+        switch (event.key) {
+            case '1':
+                AI_Vid.src = "Generation1.mp4"
+                AI_Vid.currentTime = currTime;
+                break;
+            case '2':
+                AI_Vid.src = "Generation2.mp4"
+                AI_Vid.currentTime = currTime;
+                break;
+            case '3':
+                AI_Vid.src = "Generation4.mp4"
+                AI_Vid.currentTime = currTime;
+                break;
+
+            case '4':
+                AI_Vid.src = "Generation5.mp4"
+                AI_Vid.currentTime = currTime;
+                break;
+            case '5':
+                AI_Vid.src = "Generation6.mp4"
+                AI_Vid.currentTime = currTime;
+
+                break;
+            default:
+                console.log(`Other key pressed: ${event.key}`);
+        }
+    }
+
+    // Bind the keypress event to the document
+    document.addEventListener('keydown', handleKeyPress);
+</script>
+
+</html>

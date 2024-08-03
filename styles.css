@@ -1,0 +1,56 @@
+.Header {
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.video_holder {
+    display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}
+
+
+.vid_description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+}
+.vid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+}
+
+
+.video {
+    
+    display: flex;
+    
+    align-self: center;
+}
+
+.Description {
+    text-align: center;
+}
+
+.SubDescription {
+    flex: .5;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+
+}
+
+
+
+body {
+    width: 100%;
+    height: auto;
+}
