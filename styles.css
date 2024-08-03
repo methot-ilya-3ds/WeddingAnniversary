@@ -48,7 +48,9 @@
 
 }
 
-
+.hidden-video {
+    visibility: hidden;
+}
 
 body {
     width: 100%;
